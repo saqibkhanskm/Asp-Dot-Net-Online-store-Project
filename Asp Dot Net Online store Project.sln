@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36603.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asp Dot Net Online store Project", "Asp Dot Net Online store Project\Asp Dot Net Online store Project.csproj", "{D3A00F8B-5A79-4CDB-9CDE-3F9B8ABA810B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3A00F8B-5A79-4CDB-9CDE-3F9B8ABA810B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3A00F8B-5A79-4CDB-9CDE-3F9B8ABA810B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3A00F8B-5A79-4CDB-9CDE-3F9B8ABA810B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3A00F8B-5A79-4CDB-9CDE-3F9B8ABA810B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CEAD6299-B2C5-4E41-BAA9-0E2870F7D1EB}
+	EndGlobalSection
+EndGlobal
