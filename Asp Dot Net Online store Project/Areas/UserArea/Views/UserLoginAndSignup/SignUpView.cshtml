@@ -1,11 +1,65 @@
-﻿
+﻿@model Asp_Dot_Net_Online_store_Project.DTOS.F_UserDTOS.UserInsertDTO
+
 @{
     ViewBag.Title = "SignUpView";
     Layout = "~/Views/Shared/Main_Layout.cshtml";
 }
 
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+            <div class="card shadow-lg border-0 rounded-3">
+                <div class="card-body p-5">
+                    <h3 class="text-center mb-4 font-weight-bold">Create Account</h3>
+                    <form>
+                        <div class="form-group mb-3">
+                            <label>Full Name</label>
+                            <input type="text" class="form-control" name="FullName" placeholder="Enter your full name" />
+                        </div>
 
-<h2>SignUp View</h2>
+                        <div class="form-group mb-3">
+                            <label>UserName</label>
+                            <input type="text" class="form-control" name="UserName" placeholder="Enter your UserName" />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>Email</label>
+                            <input type="email" class="form-control" name="Email" placeholder="Enter your email" />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>Password</label>
+                            <input type="password" class="form-control" name="Password" placeholder="Enter your password" />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>City</label>
+                            <input type="text" class="form-control" name="City" placeholder="Enter your city" />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>Country</label>
+                            <input type="text" class="form-control" name="Country" placeholder="Enter your country" />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>Contact</label>
+                            <input type="text" class="form-control" name="ContactNumber" placeholder="Enter your contact number" />
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary btn-block py-2">Register Now</button>
+                        </div>
+
+                        <div class="text-center mt-3">
+                            <small>Already have an account? <a href="/Account/Login" class="text-primary">Login here</a></small>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
