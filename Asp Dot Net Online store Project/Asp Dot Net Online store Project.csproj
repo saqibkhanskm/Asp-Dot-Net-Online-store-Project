@@ -237,11 +237,25 @@
     <Compile Include="Common\Enums\F_EnumRoles\Role.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DTOS\F_UserDTOS\UserInsertDTO.cs" />
+    <Compile Include="Extensions\Mappers\UserDTOSMapper\UserMappers.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20251023070904_Adding First Entity.cs" />
+    <Compile Include="Migrations\20251023070904_Adding First Entity.Designer.cs">
+      <DependentUpon>20251023070904_Adding First Entity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20251023190746_adding user entity in db set.cs" />
+    <Compile Include="Migrations\20251023190746_adding user entity in db set.Designer.cs">
+      <DependentUpon>20251023190746_adding user entity in db set.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\AppDbContextModelSnapshot.cs" />
     <Compile Include="Models\F_UsrModels\UserInsertModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorys\UsersignUpRepo\F_IUserSignUpRepo\IUserSignUpRepo.cs" />
+    <Compile Include="Repositorys\UsersignUpRepo\F_UserSignUpRepo\UserSignUpRepo.cs" />
+    <Compile Include="Services\UserSignUpService\F_IUserSignUpService\IUserSignUpService.cs" />
+    <Compile Include="Services\UserSignUpService\F_UserSignUpService\UserSignUpService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\css\style.css" />
@@ -274,6 +288,7 @@
     <Content Include="Assets\img\vendor-6.jpg" />
     <Content Include="Assets\img\vendor-7.jpg" />
     <Content Include="Assets\img\vendor-8.jpg" />
+    <Content Include="Assets\jquery-3.7.1.min.js" />
     <Content Include="Assets\js\main.js" />
     <Content Include="Assets\lib\easing\easing.js" />
     <Content Include="Assets\lib\easing\easing.min.js" />
@@ -438,10 +453,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\UserArea\Data\" />
+    <Folder Include="Areas\UserArea\Views\Default\" />
     <Folder Include="Areas\UserArea\Views\Shared\" />
-    <Folder Include="Extensions\" />
-    <Folder Include="Repositorys\" />
-    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

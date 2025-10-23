@@ -1,4 +1,5 @@
 ﻿
+using Asp_Dot_Net_Online_store_Project.Models.F_UsrModels;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,10 @@ namespace Asp_Dot_Net_Online_store_Project.Common.ApplicationDbContext
                 var Conn = ConfigurationManager.ConnectionStrings["E_Shopper_Connection"].ConnectionString;
                 optionsBuilder.UseSqlServer(Conn);
             }
+
+           
         }
+        public DbSet<UserInsertModel> Users { get; set; }
     }
+
 }

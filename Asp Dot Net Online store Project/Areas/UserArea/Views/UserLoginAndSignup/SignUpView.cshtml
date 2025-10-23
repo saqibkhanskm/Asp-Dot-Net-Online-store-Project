@@ -5,53 +5,53 @@
     Layout = "~/Views/Shared/Main_Layout.cshtml";
 }
 
-<div class="container py-5">
+<div class="container py-3">
     <div class="row justify-content-center">
-        <div class="col-lg-6 col-md-8">
-            <div class="card shadow-lg border-0 rounded-3">
-                <div class="card-body p-5">
-                    <h3 class="text-center mb-4 font-weight-bold">Create Account</h3>
-                    <form>
-                        <div class="form-group mb-3">
+        <div class="col-lg-5 col-md-7 col-sm-9">
+            <div class="card shadow border-0 rounded-3">
+                <div class="card-body p-4">
+                    <h4 class="text-center mb-3 fw-semibold">Create Account</h4>
+                    <form id="SignUpForm" onsubmit="UserSignUp(event)">
+                        <div class="form-group mb-2">
                             <label>Full Name</label>
-                            <input type="text" class="form-control" name="FullName" placeholder="Enter your full name" />
+                            <input type="text" class="form-control form-control-sm" name="FullName" placeholder="Full name" />
                         </div>
 
-                        <div class="form-group mb-3">
+                        <div class="form-group mb-2">
                             <label>UserName</label>
-                            <input type="text" class="form-control" name="UserName" placeholder="Enter your UserName" />
+                            <input type="text" class="form-control form-control-sm" name="UserName" placeholder="User name" />
                         </div>
 
-                        <div class="form-group mb-3">
+                        <div class="form-group mb-2">
                             <label>Email</label>
-                            <input type="email" class="form-control" name="Email" placeholder="Enter your email" />
+                            <input type="email" class="form-control form-control-sm" name="Email" placeholder="Email" />
                         </div>
 
-                        <div class="form-group mb-3">
+                        <div class="form-group mb-2">
                             <label>Password</label>
-                            <input type="password" class="form-control" name="Password" placeholder="Enter your password" />
+                            <input type="password" class="form-control form-control-sm" name="Password" placeholder="Password" />
                         </div>
 
-                        <div class="form-group mb-3">
+                        <div class="form-group mb-2">
                             <label>City</label>
-                            <input type="text" class="form-control" name="City" placeholder="Enter your city" />
+                            <input type="text" class="form-control form-control-sm" name="City" placeholder="City" />
                         </div>
 
-                        <div class="form-group mb-3">
+                        <div class="form-group mb-2">
                             <label>Country</label>
-                            <input type="text" class="form-control" name="Country" placeholder="Enter your country" />
+                            <input type="text" class="form-control form-control-sm" name="Country" placeholder="Country" />
                         </div>
 
                         <div class="form-group mb-3">
                             <label>Contact</label>
-                            <input type="text" class="form-control" name="ContactNumber" placeholder="Enter your contact number" />
+                            <input type="text" class="form-control form-control-sm" name="ContactNumber" placeholder="Contact number" />
                         </div>
 
-                        <div class="text-center mt-4">
-                            <button type="submit" class="btn btn-primary btn-block py-2">Register Now</button>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-sm w-100">Register</button>
                         </div>
 
-                        <div class="text-center mt-3">
+                        <div class="text-center mt-2">
                             <small>Already have an account? <a href="/Account/Login" class="text-primary">Login here</a></small>
                         </div>
                     </form>
@@ -60,6 +60,35 @@
         </div>
     </div>
 </div>
+
+<script src="~/Assets/jquery-3.7.1.min.js"></script>
+
+
+<script>
+
+    function UserSignUp(event) {
+        event.preventDefault();
+        var Data = document.getElementById("SignUpForm");
+        var Form = new FormData(Data);
+        $.ajax({
+            type: 'POST',
+            url: '/UserArea/UserLoginAndSignup/UserSignUp',
+            data: Form,
+            contentType: false,
+            processData: false,
+            success: function (result) {
+                if (result==1) {
+                    alert(response.message);
+                    //window.location.href = '/Account/Login';
+                } else {
+                    alert(response.message);
+                }
+            }
+        })
+    }
+
+
+</script>
 
 
 
